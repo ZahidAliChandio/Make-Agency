@@ -1,0 +1,108 @@
+.transitional-box {
+    position: relative;
+    display: inline-block;
+    margin: 0.1em 0.1em 0 0.1em;
+    cursor: pointer;
+}
+
+.changeBg {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    height: 400px;
+    width: 400px;
+    background-color: rgba(52, 73, 94, .65);
+    transition: opacity 0.3 ease-in;
+    z-index: 100;
+}
+
+.l-transtional-img-box {
+    overflow: hidden;
+}
+
+/* .l-transtional-img-box::before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    background-color: rgba(52, 73, 94, .75);
+    z-index: -99;
+} */
+
+.l-transtional-img-box img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease-in;
+}
+
+.l-transtional-img-box:hover img {
+    transform: scale(1.1);
+}
+
+.l-transtional-txt-box {
+    box-sizing: border-box;
+    padding: 0 4em;
+    background-color: #2B2B2B;
+    text-align: left;
+    width: 400px;
+    height: 330px;
+    border: 1px solid black;
+    font-family: 'Avenir-Book';
+}
+
+.l-transtional-txt-box p {
+    margin-top: 1.3em;
+    font-size: 1.9rem;
+    color: #fff;
+    line-height: 2.1rem;
+}
+
+.l-transitional-btn {
+    display: inline-block;
+    margin-top: 3em;
+    font-size: 1rem;
+    padding: 0.4em 1.9em;
+    color: #fff;
+    border: 0.09em solid #fff;
+    text-decoration: none;
+    font-weight: 200;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.overlaper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    padding: 2em 0 0 2em;
+    width: 400px;
+    height: 400px;
+    transition: all 0.3s ease-in;
+    z-index: 200;
+}
+
+.l-transtional-img-box:hover .changeBg,
+.l-transtional-img-box:hover .overlaper {
+    opacity: 1;
+}
+
+.overlaper .heading {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Joyride STD';
+}
+
+.overlaper p {
+    margin-top: 1.3em;
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 2.1rem;
+}

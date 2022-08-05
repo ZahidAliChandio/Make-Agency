@@ -1,0 +1,29 @@
+.articles-content{
+    display: flex;
+    padding: 0 1em;
+    flex-direction: column;
+    gap:1em;
+}
+.articles-content .news-heading{
+    font-size: 1.5625rem;
+    line-height: 1.3;
+    font-weight: bolder;
+}
+.articles-content .title{
+    font-size: 1.4rem;
+    color: #2B2B2B;
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: "Avenir Book";
+}
+.articles-content p{
+    font-size: 1.2rem;
+}
+.articles-content .a-read-more{
+    font-size: 1.1rem;
+    color: #2B2B2B;
+    font-family: "Avenir Book";
+    line-height: 1.5;
+    font-weight: bold;
+    text-decoration: none;
+}

@@ -1,0 +1,86 @@
+#review-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em 0;
+    height: 550px;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.review-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    width: 650px;
+    height: 500px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.review-container {
+    position: relative;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    left: 0;
+}
+
+.review-container::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    animation: fadeInOutAnimation 9s linear infinite;
+    transition: all 2s ease-in;
+}
+.review-author::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 85%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    margin: auto auto;
+    font-size: 1rem;
+    width: 9rem;
+    animation: authorFadeAnimation 9s linear infinite;
+    transition: all 2s ease-in;
+}
+
+@keyframes fadeInOutAnimation {
+    0% {
+        content: 'We ve worked with Make to redesign our public and media website. The team have been great to work with, accommodating last minute requests and having a thorough design process. I would highly recommend Make for any website needs';
+    }
+
+    33% {
+        content: 'Mollie’s have been working in partnership with Make Agency for the past 18 months, and in that time have been responsible for all elements of our digital marketing including web, social, creative and paid advertising';
+    }
+
+    66% {
+        content: 'I worked with Make Agency as part of a new marketing strategy and re-brand for a Cloud Services Client. All the team were incredibly professional and easy to work with throughout the website build. Their knowledge of other areas including social ads, video and streaming was also impressive. Would highly recommend and work with the team again.';
+    }
+
+    100% {
+        content: 'We have enjoyed working with Make Agency on the rebranding and launch of our new corporate website. The team approached the brief with enthusiasm and energy, responding to our queries throughout the project with efficiency and ease.';
+    }
+}
+
+@keyframes authorFadeAnimation {
+    0% {
+        content: 'PR & Comms | Virgin Racing';
+    }
+
+    33% {
+        content: 'Darren Sweetland | Mollies by Soho House';
+    }
+
+    66% {
+        content: 'Kristy Eivers | Nordcloud by IBM';
+    }
+
+    100% {
+        content: 'Lily Murphy | Bonnier Publishing';
+    }
+}

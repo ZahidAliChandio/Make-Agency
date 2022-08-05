@@ -1,0 +1,177 @@
+#landing-section {
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    height: 98vh;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    vertical-align: baseline;
+}
+
+#landing-section video {
+    position: absolute;
+    object-fit: contain;
+    opacity: 0.6;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    font: inherit;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.landing-content {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 1260px;
+    margin: auto;
+    padding: 0 25px;
+    vertical-align: baseline;
+}
+
+@media screen {
+    .landing-content {
+        padding: 60px 25px 0;
+    }
+}
+
+#landing-section .landing-title {
+    font-family: 'Joyride STD';
+    font-weight: lighter;
+    font-size: 3.5rem;
+    line-height: 120.5%;
+    margin-bottom: 53px;
+    max-width: 700px;
+    color: white;
+}
+
+#landing-section .landing-subtitle {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "Avenir-Book";
+    font-weight: bold;
+    margin: 0 0 0.7em;
+    line-height: 1.06;
+    max-width: 800px;
+    font-family: "Avenir";
+    font-weight: bold;
+    line-height: 1.06;
+    margin-bottom: 60px;
+}
+
+.white-button {
+    background-color: #fff;
+    color: #000;
+    min-width: 200px;
+}
+
+.white-button:hover {
+    background-color: grey;
+    color: white;
+}
+
+.logos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+}
+
+@media screen {
+    .logos-wrapper {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+
+.swiper {
+    margin-top: 3rem;
+    overflow: hidden !important;
+}
+
+.logos-wrapper-slider {
+    width: 95%;
+}
+
+.swiper-slide {}
+
+.logos-wrapper img {
+    width: 8rem;
+    height: 2.8rem;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.l-intro {
+    height: 500px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.l-intro .intro-bg-image {
+    height: inherit;
+    margin-left: -13rem;
+    z-index: -10;
+}
+
+.l-intro .overlay-image {
+    position: absolute;
+    height: inherit;
+    width: 100vw;
+    top: 0;
+    z-index: 10;
+}
+
+.l-intro .i-text-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    top: 7em;
+    left: 5em;
+    width: 56vw;
+    z-index: 15;
+    gap: 1em;
+    font-family: 'Joyride STD';
+}
+
+.i-text-content h1 {
+    font-size: 2rem;
+    
+}
+
+.i-text-content p {
+    font-size: 1.7rem;
+    font-weight: lighter;
+}
+.i-text-content .button {
+    display: inline-block;
+    font-size: 1.2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.4em 2em;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+}
+
+#l-transitional-section {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    margin-top: -5em;
+    padding: 0em 4.5em;
+    z-index: 20;
+}
