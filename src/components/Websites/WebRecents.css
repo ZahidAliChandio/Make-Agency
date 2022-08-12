@@ -1,0 +1,76 @@
+#recent-history {
+    padding: 5em 0 2em 5em;
+    background-color: black;
+    color: white;
+}
+
+.swiper-container {
+    margin: 5rem auto;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-container a {
+    background-color: green;
+    z-index: 2000;
+    border: 2px solid yellow;
+}
+
+.swiper {
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.swiper-slide {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.7rem;
+}
+
+.swiper-slide .bg-image {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.bg-image video {
+    z-index: 200;
+    height: inherit;
+    width:inherit;
+    object-fit: fill;
+}
+
+.bg-image img {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: inherit;
+    width: inherit;
+    object-fit: fill;
+    z-index: 250;
+    filter: brightness(0.7);
+    transition: all 0.2s ease-in;
+}
+.swiper-slide:hover .bg-image>img{
+    filter: brightness(1);
+}
+.swiper-slide .overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 300;
+    transform: translate(-50%, 0);
+}
+
+.overlay img {
+    width: 5.7rem;
+    height: 1.8rem;
+}

@@ -1,0 +1,53 @@
+.web-intro-section{
+    display: flex;
+    position: relative;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 4em 0 0 4.5em;
+    height: 105vh;
+    width: 100%;
+    background-color: black;
+    color:white;
+    overflow: hidden;
+}
+.i-left{
+    width: 55%;
+}
+.web-intro-section .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.i-heading{
+    font-size: 5.5rem;
+    line-height: 5.2rem;
+    font-family: 'Joyride STD';
+}
+.i-heading>:nth-child(1){
+    color:black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+.i-heading>:nth-child(2){
+    font-weight:800;
+}
+.web-intro-section .para-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.btn{
+    margin-left: 0;
+}
+.web-intro-section img{
+    display: block;
+    position: absolute;
+    object-fit: cover;
+    width: 700px;
+    right: -9rem;
+}
+.websites-para{
+    line-height: 1.6rem;
+    letter-spacing: 0.02em;
+    font-family: 'Avenir-Book';
+}

@@ -65,19 +65,22 @@
 }
 
 .white-button {
+    display: inline-block;
     background-color: #fff;
     color: #000;
-    min-width: 200px;
+    min-width: 200px !important;
 }
 
 .white-button:hover {
     background-color: grey;
     color: white;
 }
-
+#landing-section .yellow-button{
+    margin-left: 10px;
+}
 .logos-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3.2rem auto;
     position: relative;
     z-index: 1;
 
@@ -92,17 +95,14 @@
 
 
 .swiper {
-    margin-top: 3rem;
     overflow: hidden !important;
-}
-
-.logos-wrapper-slider {
-    width: 95%;
+    /* border: 2px solid red; */
 }
 
 .swiper-slide {}
 
 .logos-wrapper img {
+    /* border: 2px solid red; */
     width: 8rem;
     height: 2.8rem;
     position: relative;

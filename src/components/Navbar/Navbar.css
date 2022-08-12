@@ -3,9 +3,10 @@
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    line-height: 40px;
-    padding: 0.625rem 3.875rem 0.625rem 3.875rem;
+    height: 3.8em;
+    padding: 0.6rem 5rem 0.6rem 2.5rem;
     z-index: 102;
+    align-items: center;
   }
   
   #logo {
@@ -14,6 +15,7 @@
     text-decoration: none;
     font-weight: bolder;
     color: white;
+    font-family:'Joyride STD';
   }
   
   #logo:hover {
@@ -23,7 +25,7 @@
   #navbar {
     display: flex;
     font-family: inherit;
-    padding: 0px 30px 0px 16px;
+    padding: 0px 30px 0px 14px;
     text-align: left;
     width: auto;
     text-decoration: none;
@@ -38,7 +40,6 @@
   #navbar li .active {
     color: #eaf765 !important;
   }
-  
   .nav-item {
     font-size: 16px;
     padding: 0rem 0.5rem !important;
@@ -48,17 +49,22 @@
     color: #fff;
     font-family: 'Avenir-Book';
     -webkit-font-smoothing: antialiased;
+    font-weight: lighter;
   }
-  
   .dropdown {
     position: relative;
-    display: inline-block;
   }
-  
+  /* .dropbtn{
+    display: flex;
+    align-items: center;
+  } */
+  .nav-service-icon{
+    color: yellow;
+  }
   .dropdown-content {
     display: none;
     margin-top: 0.09em;
-    padding:0em 0.5em;
+    padding:1em 0.5em;
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -67,12 +73,13 @@
   }
   
   .dropdown-content a {
-    color: white;
-    padding: 2px 6px;
-    text-decoration: none;
     display: block;
+    margin-top: 1em;
+    padding: 1.8px 6px;
+    text-decoration: none;
+    color: white;
   }
-  
+    
   .dropdown-content a:hover {
     color: #eaf765
   }
@@ -84,31 +91,28 @@
   .nav-item-color:hover {
     color: #eaf765;
   }
-  #nav-container .yellow-button{
-    padding: 0rem 2.2rem  !important;
-  }
   .btn {
     display: inline-block;
-    font-size: 1rem;
     padding: 0.7em 2.2em;
     text-decoration: none;
-    color: #fff;
     background: transparent;
     cursor: pointer;
     outline: none;
     border: none;
     border-radius: 3px;
-    margin: 0 10px 0px;
-    transition: all .3s;
+    transition: all .3s ease-in;
     text-align: center;
     letter-spacing: .04rem;
     font-weight: bold;
     font-family: "WesFy-Black";
     white-space:nowrap;
-  }
-  
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 2.5rem;
+    align-items: center;
+  }  
   .yellow-button {
-      background-color: #EAF765;
+    background-color: #EAF765;
     color: #1a1a1a;
   }
   

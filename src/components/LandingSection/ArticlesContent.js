@@ -3,7 +3,10 @@ import './Articles.css'
 export default function ArticlesContent(props) {
     return (
         <div className='articles-content'>
-            <h4 className='news-heading'>{props.heading}</h4>
+            <div className='disp-flex d-flex'>
+                {/* <span className="heart-icont icon">{props.icon}</span> */}
+                <h4 className={`news-heading ${props.icon.displayName}==='AiOutlineHeart'?'color-blue':''`}>{props.heading}</h4>
+            </div>
             <a href="/" className='title'><h3>{props.title}</h3></a>
             <div>
                 <p>{props.para}</p>

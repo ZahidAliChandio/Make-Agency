@@ -1,16 +1,19 @@
 import React from 'react'
 import './Navbar.css'
 import PropTypes from 'prop-types'
+import {FaAngleDown } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 export default function Navbar(props) {
   return (
     <nav id="nav-container" className='bg-black'>
-      <a id="logo" href="/" >MAKE</a>
-      <nav id="navbar">
+      <a id="logo" href="/" ><i> MAKE</i></a>
+      <div id="navbar">
         <li className="item" id="item1"><a className="nav-item nav-item-color" href="/">About Us</a></li>
         <div className="dropdown">
           <li className="item dropbtn" id="item1"><a className="nav-item active" href="/">Our Services</a>
+          {/* <FaAngleDown className='nav-service-icon'/> */}
             <div className="dropdown-content">
-              <a href="/">Websites</a>
+              <Link to="/website">Websites</Link>
               <a href="/">Social Media</a>
               <a href="/">Creative Content</a>
               <a href="/">Paid Marketing</a>
@@ -22,8 +25,8 @@ export default function Navbar(props) {
         <li className="item" id="item3"><a className="nav-item nav-item-color" href="/">Blog</a></li>
         <li className="item" id="item4"><a className="nav-item nav-item-color" href="/">Careers</a></li>
         <li className="item" id="item4"><a className="nav-item nav-item-color" href="/">Contact Us</a></li>
-      </nav>
-      <a href="/" className='btn yellow-button' id='yellow-btn'>Start Your Project</a>
+      </div>
+      <a href="/" className='btn yellow-button' id='nav-yellow-btn'>Start Your Project</a>
     </nav>
   )
 }

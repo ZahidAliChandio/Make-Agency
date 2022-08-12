@@ -1,0 +1,30 @@
+.keypoints-container{
+    padding-bottom: 7em;
+    color: white;
+    background-color: black;
+}
+.keypoints-container .w-heading{
+    margin-top: 4em;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+#w-boxes{
+    display: flex;
+    font-size: 0.8125rem;
+    margin-top: 3em;
+    justify-content: space-between;
+    gap: 3rem;
+    font-family: 'Avenir-Book';
+    font-weight: bold;    
+}
+.box-heading{
+    font-family: 'Joyride STD';
+    line-height: 1.2rem;
+    font-weight: 400;
+}
+#w-boxes .box{
+    
+}
+.text-yellow{
+    color: #eaf765;
+}

@@ -1,0 +1,8 @@
+#s-bank-section{
+    margin: -11rem 0 -8em 0;
+    display: flex;
+    justify-content: center;
+}
+#s-bank-section img{
+    transform: scale(0.7499);
+}

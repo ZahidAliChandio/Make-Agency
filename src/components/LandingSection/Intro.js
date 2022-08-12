@@ -23,7 +23,7 @@ import IntroBgImage from '../../images/landing-intro-background-image.jpg'
 import IntroOverlayImage from '../../images/introduction-overlay-black.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import SwiperCore,{Autoplay} from 'swiper'
+import SwiperCore, { Autoplay } from 'swiper'
 import Boxes from './Boxes'
 export default function LandingSection() {
   SwiperCore.use([Autoplay]);
@@ -31,7 +31,7 @@ export default function LandingSection() {
     spaceBetween: 5,
     slidesPerView: 6,
     // grabCursor: true,
-    // className: 'logos-container-slider',
+    // className: 'logos-wrapper-slider',
     loop: true,
     autoplay: {
       delay: 900
@@ -42,7 +42,6 @@ export default function LandingSection() {
       <div className="video-container">
         <video loop autoPlay={true} preload="auto" muted playsInline>
           <source src={Video} type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
         <div className="landing-content">
           <h1 className='landing-title'>A DIGITAL AGENCY WITH A PASSION FOR MARKETING</h1>

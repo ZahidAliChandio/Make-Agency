@@ -1,0 +1,38 @@
+.w-sectional-css {
+    padding: 0em 4em 0em 5em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.s-whymake-section {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.s-whymake-section .why-make-heading{
+    color: #eaf765;
+}
+.s-whymake-section .btn{
+    margin-top: 2rem;
+    margin-left: 0;
+}
+.s-whymake-section .i-heading{
+    position: absolute;
+    right: -8.5rem;
+    bottom: 10%;
+    font-size: 7.5rem;
+    line-height: 7.5rem;
+    font-family: 'Joyride STD';
+}
+.s-whymake-section .i-heading>:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #eaf765;
+}
+.s-whymake-section .i-heading>:nth-child(3){
+    color:#eaf765;
+    font-weight:400;
+}
+.text-yellow{
+    color: #eaf765;
+}
