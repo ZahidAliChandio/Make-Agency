@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-between;
     position: fixed;
+    top: 0;
     width: 100%;
     height: 3.8em;
     padding: 0.6rem 5rem 0.6rem 2.5rem;
-    z-index: 102;
+    z-index: 1000;
     align-items: center;
   }
   
@@ -25,7 +26,7 @@
   #navbar {
     display: flex;
     font-family: inherit;
-    padding: 0px 30px 0px 14px;
+    align-items: center;
     text-align: left;
     width: auto;
     text-decoration: none;
@@ -40,7 +41,7 @@
   #navbar li .active {
     color: #eaf765 !important;
   }
-  .nav-item {
+  #navbar .nav-item {
     font-size: 16px;
     padding: 0rem 0.5rem !important;
     cursor: pointer;
@@ -50,17 +51,24 @@
     font-family: 'Avenir-Book';
     -webkit-font-smoothing: antialiased;
     font-weight: lighter;
+    /* width: fit-content; */
+  }
+  #navbar .nav-item:hover{
+    color: #eaf765;
   }
   .dropdown {
     position: relative;
+    display: inline-block;
+  }
+  .fa-caret-down{
+    color: #eaf765;
+    font-size: 0.8rem;
+    padding: 0.2em 0.3em;
   }
   /* .dropbtn{
     display: flex;
     align-items: center;
   } */
-  .nav-service-icon{
-    color: yellow;
-  }
   .dropdown-content {
     display: none;
     margin-top: 0.09em;
@@ -68,7 +76,7 @@
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 200;
     background-color: black;
   }
   
@@ -81,7 +89,7 @@
   }
     
   .dropdown-content a:hover {
-    color: #eaf765
+    color: #eaf765;
   }
   
   .dropdown:hover .dropdown-content {

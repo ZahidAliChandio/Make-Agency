@@ -1,0 +1,33 @@
+#project-hire-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.ph-bg-image img{
+    object-fit: cover;
+    height: 500px;
+}
+
+.ph-text-content{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.inner-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    /* d-flex f-column gap-2 justify-center */
+}
+.ph-text-content .transitional-btn{
+    width: -moz-fit-content;
+    width: fit-content;
+}

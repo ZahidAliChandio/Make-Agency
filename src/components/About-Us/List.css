@@ -1,0 +1,52 @@
+.list-section{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 8em 6em;
+    width: 100%;
+    overflow: hidden;
+    gap: 2rem;
+    background-color: #2B2B2B;
+    color: white;
+}
+.list-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0.5em 1em 5em 2em;
+}
+.list-left .left-item{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5rem;
+    gap: 3.2rem;
+}
+.l-yellow-text{
+    font-size: 1.3rem;
+    font-family: "Avenir Book";
+}
+.l-number-heading{
+    font-size: 6.5rem;
+    font-family: "WesFy Black";
+    font-weight: 1000;
+}
+.list-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 50%;
+    padding: 0 1em 0 1em;
+}
+.list-right .title,.a-heading{
+    font-size: 2rem;
+    font-family: 'Joyride STD';
+}
+.list-right .subtitle{
+    font-size: 1.5rem;
+    font-family: 'Avenir-Book';
+}
+.l-right-para{
+    line-height: 1.6em;
+    font-family: 'Avenir-Book';
+}

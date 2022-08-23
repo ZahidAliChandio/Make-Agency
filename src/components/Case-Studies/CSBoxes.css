@@ -1,0 +1,27 @@
+.s-boxes-container{
+    position: relative;
+    background: #000;
+    padding:  0.3em 4em;
+    z-index: 500;
+}
+.s-box{
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr 0.4fr;
+    grid-row-gap: 0.4em
+}
+.s-box .img-container{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+.img-container img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease-in;
+}
+.img-container:hover img{
+    transform: scale(1.09);
+}

@@ -4,12 +4,18 @@ function ImgBox(props) {
     return (
         <div className='l-transtional-img-box transitional-box'>
             <div className='changeBg'></div>
-            < img src={props.content} alt="transitional-image" />
+            <div className="bg-container">
+                < img src={props.content} alt="transitional-image" />
+            </div>
             <div className="overlaper">
-                <h1 className='heading'>{props.overlaperHeading}</h1>
-                {!(props.overlaperContent === '') && <p>{props.overlaperContent}</p>}
-                {!(props.overlaperAnchor==='') &&
-                <a href="/" className='button overlaper-btn l-transitional-btn'>{props.overlaperAnchor}</a>}
+                <div className="overlaper-content">
+                    <h1 className='heading'>{props.overlaperHeading}</h1>
+                    {!(props.overlaperContent === '') && <p>{props.overlaperContent}</p>}
+                    {!(props.overlaperAnchor === '') &&
+                        <div className="overlayer-btn-container">
+                            <a href="/" className='button overlaper-btn transitional-btn'>{props.overlaperAnchor}</a>
+                        </div>}
+                </div>
             </div>
         </div>
     )

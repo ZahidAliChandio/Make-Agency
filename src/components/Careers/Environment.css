@@ -1,0 +1,32 @@
+#environment-container{
+    position: relative;
+}
+.c-dup-portion{
+    margin: 5em 0;
+    display: flex;
+    gap: 4em;
+}
+.c-left{
+    padding-left: 4em;
+}
+.c-right{
+    padding-right: 4em;
+}
+.c-dup-portion{
+    display: flex;
+    gap: 4em;
+}
+.c-dup-portion .career-img{
+    width: 500px;
+    height: 560px;
+}
+.c-text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+.c-dup-portion .career-heading{
+    font-size: 2rem;
+    font-family: 'Joyride STD';
+}

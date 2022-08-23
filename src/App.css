@@ -36,9 +36,17 @@ body {
 .d-flex {
   display: flex;
 }
-
+.f-column{
+  flex-direction: column;
+}
+.gap-2{
+  gap: 2rem;
+}
 .disp-flex {
   display: flex;
+}
+.align-center{
+  text-align: center;
 }
 
 .d-block {

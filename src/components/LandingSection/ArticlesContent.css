@@ -8,20 +8,24 @@
     font-size: 1.5625rem;
     line-height: 1.3;
     font-weight: bolder;
+    font-family: 'Avenir-Book';
 }
 .articles-content .title{
-    font-size: 1.4rem;
+    font-size: 1.5625rem;
+    line-height: 1.3;
     color: #2B2B2B;
     text-decoration: none;
     font-family: 'Avenir-Book';
+    vertical-align: baseline;
 }
 .articles-content p{
-    font-size: 1.2rem;
+    font-family: 'Avenir-Book';
+    color: #333;
 }
 .articles-content .a-read-more{
     font-size: 1.1rem;
-    color: #2B2B2B;
-    font-family: "Avenir Book";
+    color: #333;
+    font-family: 'WesFy Black';
     line-height: 1.5;
     font-weight: bold;
     text-decoration: none;

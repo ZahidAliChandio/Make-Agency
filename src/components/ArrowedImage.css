@@ -1,0 +1,118 @@
+#arrowed-image-container {
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.arrowed-bg-image {
+    background-repeat: no-repeat;
+}
+
+.hero {
+    background-size: cover;
+    position: relative;
+    transition: top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-bottom: -1px;
+    background-position: top right;
+    z-index: 0;
+}
+
+.black-overlay {
+    background-image: url('../images/introduction-overlay-black.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.arrowed-text-container {
+    position: relative;
+    z-index: 200;
+    color: #fff;
+}
+
+.hero .wrapper{
+    position: relative;
+    padding-bottom: 36%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 0;
+}
+.padding-x-half {
+    padding-left:1.875rem;
+    padding-right: 1.875rem;
+    height: 0;
+}
+
+.inner-hero {
+    padding: 6.25rem 0 2.5rem;
+}
+
+.inner-hero p {
+    margin: 2rem 0;
+}
+.inner-hero h1 p, .inner-hero h2 p {
+    margin-bottom: 0;
+}
+.inner-hero h1 {
+    font-size: 1.875rem;
+    letter-spacing: 0.1;
+    margin: 0 0 0.7em;
+    line-height: 1.06;
+    font-family: 'Joyride STD';
+}
+
+.subtitle {
+    font-size: 1.5625rem;
+    font-family: 'Avenir-Book';
+    line-height: 1.3;
+}
+
+@media screen and (min-width: 1000px) {
+    .hero {
+        background-size: contain;
+    }
+    .overlay{
+        display: block;
+    }
+}
+
+@media (min-width: 62.625rem) {
+    .inner-hero {
+        padding: 4.375rem 0 2.5rem;
+        max-width: 65%;
+    }
+    .inner-hero h1,h2{
+        font-size: 3.4375rem;
+    }
+}
+@media (min-width: 79.375rem) {
+    .inner-hero {
+        top: 52%;
+        left: 0;
+        transform: translateY(-50%);
+        padding: 0;
+    }
+}
+
+@media (min-width: 1270px) {
+    .inner-hero {
+        position: absolute;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 79.375rem){
+    body:not(.home) .hero .wrapper {
+        min-height: 15.625rem;
+    }
+}

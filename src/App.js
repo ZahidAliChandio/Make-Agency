@@ -9,6 +9,10 @@ import {
   Link
 } from "react-router-dom";
 import Footer from './components/Footer/Footer';
+import CaseStudies from './components/Case-Studies/CaseStudies';
+import About from './components/About-Us/About';
+import Careers from './components/Careers/Careers';
+import Project from './components/StartProject/Project';
 function App() {
   return (
     <Router>
@@ -18,11 +22,25 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingSection />} />
           </Routes>
+          <Routes>
+            <Route path="/start-project" element={<Project/>} />
+          </Routes>
+          <Routes>
+            <Route path="/about" element={<About/>} />
+          </Routes>
         </section>
         <Routes>
           <Route path="/website" element={<Website />} />
         </Routes>
-      <Footer/>
+        <Routes>
+          <Route path="/case-studies" element={<CaseStudies />} />
+        </Routes>
+        <Routes>
+          <Route path="/careers" element={<Careers/>} />
+        </Routes>
+        <Footer>
+          <Footer />
+        </Footer>
       </div>
     </Router >
   );

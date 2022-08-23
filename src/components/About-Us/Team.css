@@ -1,0 +1,82 @@
+#team-container{
+    position: relative;
+    background-color: rgb(30, 29, 29);
+    color: white;
+}
+.team-members{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+    column-gap: 0.5em;
+    grid-row-gap: 0.4em;
+    padding: 1em 5em 2em 5em;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+.team-members .t-img-container{
+    position: relative;
+    width: 290px;
+    height: 300px;
+    overflow: hidden;
+}
+.t-img-container img{
+    object-fit: fill;
+    object-position: center;
+    width:290px;
+    height: 300px;
+    transition: all 0.4s ease-in;
+}
+.yellow-border{
+    position: absolute;
+    top:0;
+    width: inherit;
+    height: inherit;
+    transition: all 0.2s ease-in;
+    border: 4px solid rgb(255, 255, 96);
+    opacity: 0;
+}
+.t-img-container:hover img{
+    transform: scale(1.05);
+}
+.t-img-container:hover .yellow-border{
+    opacity: 1;
+}
+#team-video-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 108vh;
+}
+#team-video-thumbnail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#team-video-thumbnail img{
+    width: 100%;
+    height: inherit;
+    object-fit: fill;
+}
+.change-video-state{
+    position: absolute;
+    width: 5rem;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    border: none;
+    transform: translate(-50%,-50%);
+}
+.change-video-state img {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#team-media{
+    width: 100%;
+}
+#team-media img{
+    width: 337px;
+    height: 300px;
+}

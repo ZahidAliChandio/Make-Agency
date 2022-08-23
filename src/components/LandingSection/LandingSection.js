@@ -8,7 +8,7 @@ function LandingSection() {
     <div>
       <Intro/>
       <Boxes/>
-      <Articles/>
+      <Articles bgColor={'#f4f4f4'}/>
       <Reviews/>
     </div>
   )

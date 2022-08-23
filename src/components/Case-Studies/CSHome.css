@@ -1,0 +1,31 @@
+#case-studies-home{
+    position: relative;
+    color: white;
+    margin-bottom: -2.8em;
+}
+.hover-b-border{
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.hover-b-border:hover{
+    border-bottom: 2px solid white;
+}
+.drop-down-container{
+    position: absolute;
+    bottom: 5rem;
+    left: 4rem;
+    display: flex;
+    /* font-family: 'Joyride STD'; */
+    align-items: center;
+    gap: 2em;
+    z-index: 300;
+}
+.drop-down-container select{
+    height: 2rem;
+    font-weight: bold;
+    /* font-family: 'Joyride STD'; */
+    background-color: rgb(17, 15, 15);
+    color: white;
+    border: none;
+    outline: none;
+}

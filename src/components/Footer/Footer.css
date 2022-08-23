@@ -1,4 +1,4 @@
-#footer{
+#footer {
     display: flex;
     padding: 0 5em 2em 5em;
     height: 5.7rem;
@@ -6,41 +6,88 @@
     align-items: center;
     background-color: black;
     color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-#footer .nav-container{
+
+#footer .ul-container {
     display: flex;
     font-family: 'Avenir-Book';
     font-size: 0.8125rem;
+    font-weight: 100;
 }
-#footer-nav{
+
+#footer-nav {
     display: flex;
     list-style: none;
 }
-#footer-nav li{
+
+#footer-nav li {
     margin-left: 1.3em;
     border-left: 1px solid white;
     padding-left: 1em;
 }
-#footer-nav a{
+
+#footer-nav a {
     padding: 0.5em;
     line-height: 1.2rem;
     letter-spacing: 0.02rem;
     text-decoration: none;
     color: white;
 }
-#footer-nav a:hover{
-    color:yellow;
+
+#footer-nav a:hover {
+    color: yellow;
 }
-#footer .footer-icons{
+
+#icons-container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#footer .footer-icons {
     text-decoration: none;
-    color:white;
-    padding:0.1em;
+    color: white;
+    padding: 0.1em;
+    margin-left: 1.5em;
 }
-#footer .react-icon{
-    margin: 0 0.5em;
-    background-color:black;
-    color:white;
-    border:none;
-    outline:none;
+
+#footer .icons,
+.fa-instagram,
+.fa-twitter,
+.fa-facebook-f,
+.fa-linkedin-in,
+.fa-snapchat {
+    display: block;
+    font-size: 1.09rem;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+@media (max-width:600px) {
+    #footer {
+        padding-top: 1.5rem;
+        flex-direction: column;
+        height: -moz-fit-content;
+        height: fit-content;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .ul-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    #footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.3em;
+    }
+    #footer-nav li {
+        border: none;
+    }
+    #icons-container{
+        padding-bottom: 0.5em;
+    }
 }

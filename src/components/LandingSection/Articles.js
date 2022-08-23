@@ -3,9 +3,9 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import ArticlesContent from './ArticlesContent'
 import './Articles.css'
 import './ArticlesContent.css'
-export default function Articles() {
+export default function Articles(props) {
   return (
-    <div id="articles-section">
+    <div id="articles-section" style={{"backgroundColor":`${props.bgColor}`}}>
       <h1>Recent Articles</h1>
       <div className="articles-container">
         <ArticlesContent icon={""} heading={"News"} title={"How to join the TikTok party"} para={"TikTok is having a moment in the sun. According to TechCrunch, young people are now watching videos on the platform..."} />

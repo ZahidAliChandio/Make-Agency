@@ -1,6 +1,6 @@
 import React from 'react'
 import './Intro.css'
-import Video from '../../Make-Agency-Marketing-Agency.mp4'
+import Video from '../../videos/Make-Agency-Marketing-Agency.mp4'
 import Xapo from '../../transitionl-logos/xapo.png'
 import Neat from '../../transitionl-logos/neat.png'
 import NordCloundIBM from '../../transitionl-logos/nordcloud-ibm.png'
@@ -25,6 +25,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import SwiperCore, { Autoplay } from 'swiper'
 import Boxes from './Boxes'
+import {Link} from 'react-router-dom'
 export default function LandingSection() {
   SwiperCore.use([Autoplay]);
   const swiperRunner = {
@@ -47,7 +48,7 @@ export default function LandingSection() {
           <h1 className='landing-title'>A DIGITAL AGENCY WITH A PASSION FOR MARKETING</h1>
           <h2 className='landing-subtitle'>Creatively led. Results driven. Experts at what we do. <span className='text-yellow'>We make it happen.</span></h2>
           <a href="/" className='btn white-button' id='land-white-btn'>Our Work</a>
-          <a href="/" className='btn yellow-button' id='land-yellow-btn'>Start Your Project</a>
+          <Link to="/start-project" className='btn yellow-button' id='land-yellow-btn'>Start Your Project</Link>
         </div>
         <div className="logos-container">
           <div className="logos-wrapper">
