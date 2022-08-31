@@ -1,7 +1,7 @@
 #arrowed-image-container {
     position: relative;
     margin-top: 60px;
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
 }
 

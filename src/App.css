@@ -4,12 +4,17 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
-
+a{
+  text-decoration: none;
+}
 html,
 body {
   font: inherit;
 }
-
+.padding-x {
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+}
 @font-face {
   font-family: 'WesFY-Black';
   src: local('WesFY-Black'), url(./WesFY-Black/WesFY-Black.ttf) format('opentype');

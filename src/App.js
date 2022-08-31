@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <div className="outer-container">
-        <Navbar />
+        {/* <Navbar /> */}
         <section className='landing-container'>
           <Routes>
             <Route path="/" element={<LandingSection />} />
@@ -38,9 +38,9 @@ function App() {
         <Routes>
           <Route path="/careers" element={<Careers/>} />
         </Routes>
-        <Footer>
+        {/* <Footer>
           <Footer />
-        </Footer>
+        </Footer> */}
       </div>
     </Router >
   );
