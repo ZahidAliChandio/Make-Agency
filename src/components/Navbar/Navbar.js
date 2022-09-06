@@ -1,46 +1,55 @@
 import React from 'react'
 import './Navbar.css'
 import PropTypes from 'prop-types'
-import { FaAngleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 export default function Navbar(props) {
-  const [toggleNavbar, setToggleNavbar] = useState({
-    display: 'none'
+  // const [checkbox,setCheckox]=useState(false);
+  // const [toggleNavbar, setToggleNavbar] = useState(
+  // );
+  const [navChecked, setNavChecked] = useState(false);
+  const toggleNavCheck = () => {
+    setNavChecked(prev => !prev)
   }
-  );
-  const [checked, setChecked] = useState(false);
-  const toggleCheck = () => {
-    setChecked(prev => !prev)
+  const [dropDown, setDropDown] = useState('hidden');
+  const toggleDropDown = () => {
+    if(dropDown==='hidden'){
+      setDropDown('visible');
+    }else{
+      setDropDown('hidden');
+    }
   }
   return (
     <nav id="nav-container" className='bg-black padding-x-half'>
       <a id="logo" href="/" ><i> MAKE</i></a>
-      {/* <div className="wrapper nav-wrapper"> */}
-      {/* <div className="toggle-btn" style={{flexGrow:'1'}}>Hy</div> */}
-        <div id="navbar">
+      <div className="wrapper nav-wrapper">
+        {/* <div className="toggle-btn" style={{flexGrow:'1'}}> */}
+        {/* <input type="checkbox" name="toggleNavbar" id="navbar-checkbox" /> */}
+        {/* </div> */}
+        <div id="navbar" className="full-bleed" style={{ display: !navChecked ? 'flex' : 'none' }}>
+          {/* <div id="navbar" className="full-bleed" style={{visibility:!checked?'visible':'hidden'}}> */}
           <li className="item" id="item1"><Link className="nav-item nav-item-color" to="/about">About Us</Link></li>
-          <div className="dropdown">
-            <li className="item dropbtn" id="item1"><a className="nav-item active" href="/">Our Services</a>
-              <i className="fa-solid fa-caret-down"></i>
-              <div className="dropdown-content">
-                <Link to="/website">Websites</Link>
-                <a href="/">Social Media</a>
-                <a href="/">Creative Content</a>
-                <a href="/">Paid Marketing</a>
-                <a href="/">Search & SEO</a>
-              </div>
-            </li>
-          </div>
+          <li className="item dropbtn dropdown" id="item2"><a className="nav-item active" href="/"><span className='flex-1'>Our Services</span></a>
+            <i className="fa-solid fa-caret-down" onClick={toggleDropDown} />
+            <div className={`dropdown-content ${dropDown}`}>
+              <Link to="/website">Websites</Link>
+              <a href="/">Social Media</a>
+              <a href="/">Creative Content</a>
+              <a href="/">Paid Marketing</a>
+              <a href="/">Search & SEO</a>
+            </div>
+          </li>
           <li className="item" id="item2"><Link className="nav-item nav-item-color" to="/case-studies">Case Studies</Link></li>
           <li className="item" id="item3"><a className="nav-item nav-item-color" href="/">Blog</a></li>
           <li className="item" id="item4"><Link className="nav-item nav-item-color" to="/careers">Careers</Link></li>
           <li className="item" id="item4"><a className="nav-item nav-item-color" href="/">Contact Us</a></li>
         </div>
-        <Link className='btn yellow-button' id='nav-yellow-btn' to="/start-project">Start Your Project</Link>
-      {/* </div> */}
-      {/* <label htmlFor="menu-check-box" style={{color:"red"}}>Click</label> */}
-      <input type="checkbox" name="menu-check" id="menu-check-box" onClick={toggleCheck} />
+        <Link className='btn yellow-button' id='nav-yellow-btn' to="/start-project" style={{ display: !navChecked ? 'flex' : 'none' }}>Start Your Project</Link>
+      </div>
+      <div id="nav-toggle-container">
+        <label htmlFor="menu-check-box" style={{ color: "white" }}>Click</label>
+        <input type="checkbox" name="menu-check" id="menu-check-box" onClick={toggleNavCheck} style={{ display: 'none' }} />
+      </div>
     </nav>
   )
 }

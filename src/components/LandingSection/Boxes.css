@@ -73,6 +73,8 @@
     transform: scale(1.06);
     opacity: 0;
     padding: 2em 0 0 4em;
+    width: 400px;
+    height: 400px;
     transition: all 0.2s ease-in;
     /* background-color: #2B2B2B; */
     z-index: 100;
@@ -110,14 +112,35 @@
     padding: 2.5rem 3.75rem;
     background-color: #2B2B2B;
     text-align: left;
+    width: 400px;
+    height: 330px;
     border: 1px solid black;
     font-family: 'Avenir-Book';
 }
 
 .l-transtional-txt-box p {
+    margin-top: 1.3em;
     font-size: 1.9rem;
     color: #fff;
     line-height: 2.1rem;
+}
+
+.overlayer-btn-container {
+    margin-top: 3em;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.transitional-btn {
+    padding: 0.4em 1.9em;
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    border: 0.125em solid #fff;
+    text-decoration: none;
+    font-weight: 200;
+    transition: all 0.1s;
 }
 
 /* .transitional-btn::after {
