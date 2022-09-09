@@ -6,7 +6,6 @@ export default function ArrowedImage(props) {
             <div className='arrowed-bg-image hero' style={{ backgroundImage: `url(${props.bgImage})` }}>
                 <div className="overlay black-overlay">
                 </div>
-                <div className='black-overlayer'></div>
                 <div className="wrapper padding-x-half arrowed-text-container">
                     <div className="inner-hero">
                         <h1><p>{props.title}</p></h1>

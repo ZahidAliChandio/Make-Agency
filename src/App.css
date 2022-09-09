@@ -22,6 +22,10 @@ body {
 .relative{
   position: relative;
 }
+.arrow-image-container {
+  position: relative;
+  height: 545px;    
+}
 @font-face {
   font-family: 'WesFY-Black';
   src: local('WesFY-Black'), url(./WesFY-Black/WesFY-Black.ttf) format('opentype');

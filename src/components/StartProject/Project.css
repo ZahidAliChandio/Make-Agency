@@ -1,6 +1,18 @@
 #project-container {
     position: relative;
 }
+/* .arrow-image-container{
+    border: 2px solid red;
+} */
+#project-container .hero{
+    background-position:bottom right;
+    background-size: 50%;
+}
+
+#project-container .overlay{
+    background-size: contain;
+}
+
 .project-form-container {
     padding: 2.5rem 15px;
     color: #817f8b;
@@ -70,7 +82,7 @@
     margin: 0.3rem 0;
 }
 
-.form-image-container img {
+.form-image-container .form-image {
     width: 65px;
     height: 65px;
 }
@@ -160,13 +172,16 @@ select {
     background: rgb(91, 89, 89);
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+    #project-container .inner-hero h1,h2{
+        font-size: 3.4375rem;
+    }
     .project-form-container {
         padding: 2.5rem 3.75rem;
     }
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
     .project-form-container .w-heading {
         font-size: 2.1rem;
     }

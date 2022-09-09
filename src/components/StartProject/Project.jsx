@@ -60,7 +60,7 @@ export default function Project() {
               {/* <input type="checkbox" name={`form-check-box ${index}`} id="form-check-box" />
               <label htmlFor={`form-check-box ${index}`}> */}
               <li className='list-item'><div className={'form-image-container'}>
-                <img src={element.photo} alt="" className={' '} /></div>
+                <img src={element.photo} alt="" className={'form-image'} /></div>
                 <span className='list-item-title'>{element.text}</span></li>
               {/* </label> */}
             </div>

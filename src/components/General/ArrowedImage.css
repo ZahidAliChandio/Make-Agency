@@ -10,8 +10,6 @@
     height: 100%;
     transition: top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     margin-bottom: -1px;
-    /* background-position: top right; */
-    /* background-position:right; */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -20,10 +18,9 @@
 
 .black-overlay {
     background-image: url('../../images/introduction-overlay-black.png');
-    background-position: 50%;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    height: inherit;
 }
 
 .overlay {
@@ -88,7 +85,7 @@
     font-family: 'Avenir-Book';
     font-weight: lighter;
 }
-@media screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
     .hero {
         background-size: cover;
     }
@@ -100,16 +97,16 @@
     }
 }
 
-@media (min-width: 62.625rem) {
+@media only screen and (min-width: 62.625rem) {
     .inner-hero {
         padding: 4.375rem 0 2.5rem;
         max-width: 65%;
     }
     .inner-hero h1,h2{
-        font-size: 3.4375rem;
+        font-size: 2.2rem
     }
 }
-@media (min-width: 79.375rem) {
+@media only screen and (min-width: 79.375rem) {
     .inner-hero {
         top: 52%;
         left: 0;
@@ -118,13 +115,13 @@
     }
 }
 
-@media (min-width: 1270px) {
+@media only screen and (min-width: 1270px) {
     .inner-hero {
         position: absolute;
         margin: 0 auto;
     }
 }
-@media (max-width: 79.375rem){
+@media only screen and (max-width: 79.375rem){
     body:not(.home) .hero .wrapper {
         min-height: 15.625rem;
     }

@@ -1,5 +1,4 @@
 import React from 'react'
-import './ArrowImage.css'
 import ArrowedImage from '../General/ArrowedImage';
 import IntroBgImage from '../../images/landing-intro-background-image.jpg'
 const ArrowImage = () => {
