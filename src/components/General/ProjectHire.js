@@ -1,5 +1,5 @@
 import React from 'react'
-import BgImage from '../images/project-hire-bg.jpg'
+import BgImage from '../../images/project-hire-bg.jpg'
 import './ProjectHire.css'
 export default function ProjectHire() {
     return (

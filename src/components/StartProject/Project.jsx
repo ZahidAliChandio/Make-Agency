@@ -1,6 +1,6 @@
 import React from 'react'
 import './Project.css'
-import ArrowedImage from '../ArrowedImage'
+import ArrowedImage from '../General/ArrowedImage'
 import ProjectBg from '../../images/case-studies-arrow-bg.jpg'
 import Website from '../../images/project-website.svg'
 import Social from '../../images/project-social.svg'
@@ -36,7 +36,7 @@ export default function Project() {
     else {
       activatedImages.splice(index, 1);
     }
-    setActivated(prev=>prev=activatedImages);
+    setActivated(prev => prev = activatedImages);
   }
   const changeImageStyle = (index) => {
     if (activated.includes(images.imagesObj[index])) {
@@ -48,7 +48,9 @@ export default function Project() {
   }
   return (
     <div id='project-container'>
-      <ArrowedImage bgImage={ProjectBg} title={'Start your project'} subtitle={'To start your project simply complete the steps below.'} />
+      <div className="arrow-image-container">
+        <ArrowedImage bgImage={ProjectBg} title={'Start your project'} subtitle={'To start your project simply complete the steps below.'} />
+      </div>
       <div className="project-form-container">
         <span className="p-heading w-heading">Get started in 30 seconds!</span>
         <span className='p-sub-heading'>What can we help you with?*</span>

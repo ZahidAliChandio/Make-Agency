@@ -19,12 +19,9 @@ import RacingPost from '../../transitionl-logos/RacingPost.png'
 import DEBEERS from '../../transitionl-logos/DEBEERS.png'
 import LloydsPharmacy from '../../transitionl-logos/LloydsPharmacy.png'
 import FSBLogo from '../../transitionl-logos/FSBLogo.png'
-import IntroBgImage from '../../images/landing-intro-background-image.jpg'
-import IntroOverlayImage from '../../images/introduction-overlay-black.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import SwiperCore, { Autoplay } from 'swiper'
-import Boxes from './Boxes'
 import { Link } from 'react-router-dom'
 export default function LandingSection() {
   SwiperCore.use([Autoplay]);
@@ -113,16 +110,6 @@ export default function LandingSection() {
               </SwiperSlide>
             </Swiper>
           </div>
-        </div>
-      </div>
-      <div className="l-intro">
-        <img src={IntroBgImage} alt="introduction Background Image" className='intro-bg-image' />
-        <img src={IntroOverlayImage} alt="introduction Background Overlay Image" className='overlay-image' />
-        <div className="i-text-content">
-          <h1>Commercially Createive</h1>
-          <p>Make is a London-based digital agency. We guarantee results across three key business areas:
-            web design & build, social media & digital marketing, and creative content.</p>
-          <a href="/" className='button i-button'>Explore</a>
         </div>
       </div>
     </div>

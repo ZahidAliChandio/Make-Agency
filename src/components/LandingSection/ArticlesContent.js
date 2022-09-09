@@ -4,13 +4,13 @@ export default function ArticlesContent(props) {
     return (
         <div className='articles-content'>
             <div className='disp-flex d-flex'>
-                {/* <span className="heart-icont icon">{props.icon}</span> */}
-                <h4 className={`news-heading ${props.icon.displayName}==='AiOutlineHeart'?'color-blue':''`}>{props.heading}</h4>
+                <span className="heart-icont icon">{props.icon}</span>
+                <h4 className={`news-heading`}>{props.heading}</h4>
             </div>
             <a href="/" className='title'><h3>{props.title}</h3></a>
             <div>
                 <p className='articles-para'>{props.para}</p>
-                <a href="/" className='a-read-more'>Read More</a>
+                <a href="/" className='a-read-more'><span>Read More </span><i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     )

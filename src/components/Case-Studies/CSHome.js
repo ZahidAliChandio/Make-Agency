@@ -1,7 +1,7 @@
 import React from 'react'
 import './CSHome.css'
 import CaseStudyBg from '../../images/case-studies-arrow-bg.jpg'
-import ArrowedImage from '../ArrowedImage'
+import ArrowedImage from '../General/ArrowedImage'
 export default function CSHome() {
     return (
         <div id='case-studies-home'>

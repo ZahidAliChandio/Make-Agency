@@ -10,6 +10,7 @@ a{
 html,
 body {
   font: inherit;
+  height: 100vh;
 }
 .padding-x {
   padding-left: 3.75rem;
@@ -17,6 +18,9 @@ body {
 }
 .flex-1{
   flex-grow: 1;
+}
+.relative{
+  position: relative;
 }
 @font-face {
   font-family: 'WesFY-Black';

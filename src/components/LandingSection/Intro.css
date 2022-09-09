@@ -1,53 +1,51 @@
 #landing-section {
-    border: 2px solid red;
-    overflow: hidden;
+    position: relative;
+    height: 99vh;
+    overflow-x: hidden;
+    z-index: 200;
 }
 
 .video-container {
     position: relative;
-    height: 98%;
+    height: inherit;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background: #000;
     vertical-align: baseline;
 }
 
 #landing-section video {
     position: absolute;
-    object-fit:cover;
+    object-fit: cover;
     opacity: 0.6;
-    min-width: 30%;
+    min-width: 100%;
     max-height: 100%;
     top: 50%;
     left: 50%;
     font: inherit;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .landing-content {
     position: relative;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
     max-width: 1260px;
     margin: auto;
     padding: 0 25px;
     vertical-align: baseline;
-}
-
-@media screen {
-    .landing-content {
-        padding: 60px 25px 0;
-    }
+    z-index: 20;
+    /* border: 2px solid red; */
 }
 
 #landing-section .landing-title {
-    font-family: 'Joyride STD';
     font-weight: lighter;
+    font-family: 'Joyride STD';
     font-size: 3.5rem;
     line-height: 120.5%;
-    margin-bottom: 53px;
+    margin-bottom: 1%;
     max-width: 700px;
+    min-width: 400px;
     color: white;
 }
 
@@ -57,17 +55,18 @@
     font-family: "Avenir-Book";
     font-weight: bold;
     margin: 0 0 0.7em;
-    line-height: 1.06;
+    line-height: 1.06rem;
     max-width: 800px;
     font-family: "Avenir";
     font-weight: bold;
     line-height: 1.06;
     margin-bottom: 60px;
 }
-.btns-container{
-    border: 2px solid red;
-    /* float: left; */
-}
+
+/* .btns-container{
+
+} */
+
 .white-button {
     display: inline-block;
     background-color: #fff;
@@ -79,36 +78,35 @@
     background-color: grey;
     color: white;
 }
-#landing-section .yellow-button{
-    margin-left: 10px;
-}
-.logos-container {
-    position: relative;
-    max-width: 1200px;
-    margin-top: 3.5%;
-    z-index: 1;
+
+#landing-section .yellow-button {
+    margin-left: 1.5em;
 }
 
-@media screen {
-    .logos-wrapper {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
+.logos-container {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    z-index: 10;
+    overflow-x: hidden;
 }
 
 .swiper {
-    overflow: hidden !important;
-    /* border: 2px solid red; */
+    max-width: 90%;
+    margin: auto !important;
+    overflow-x: hidden !important;
+    padding: 0 1em;
 }
 
 .swiper-slide {
-    height: 2rem;
+    height: 3rem !important;
 }
 
 .logos-wrapper img {
-    /* border: 2px solid red; */
+    height: 3rem;
     width: 8rem;
-    height: 2.8rem;
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -117,48 +115,16 @@
     touch-action: pan-y;
 }
 
-.l-intro {
-    height: 500px;
-    position: relative;
-    margin-bottom: 1rem;
-}
-
-.l-intro .intro-bg-image {
-    height: inherit;
-    margin-left: -13rem;
-    z-index: -10;
-}
-
-.l-intro .overlay-image {
-    position: absolute;
-    height: inherit;
-    width: 100vw;
-    top: 0;
-    z-index: 10;
-}
-
-.l-intro .i-text-content {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    position: absolute;
-    top: 7em;
-    left: 5em;
-    width: 56vw;
-    z-index: 15;
-    gap: 1em;
-    font-family: 'Joyride STD';
-}
-
 .i-text-content h1 {
     font-size: 2rem;
-    
+
 }
 
 .i-text-content p {
     font-size: 1.7rem;
     font-weight: lighter;
 }
+
 .i-text-content .button {
     display: inline-block;
     font-size: 1.2rem;
@@ -171,11 +137,43 @@
 }
 
 #l-transitional-section {
-    display:flex;
+    display: flex;
     justify-content: left;
     align-items: center;
     position: relative;
     margin-top: -5em;
     padding: 0em 4.5em;
     z-index: 20;
+}
+
+@media only screen and (max-width:770px) {
+    .landing-content {
+        text-align: center;
+    }
+
+    #landing-section .landing-title {
+        font-size: 2.47rem;
+    }
+
+    .btns-container {
+        text-align: center;
+    }
+}
+@media only screen and (max-width:650px) {
+    #landing-section .landing-title {
+        font-size: 2rem;
+    }
+    #landing-section .landing-subtitle {
+        font-size: 1rem;
+    }
+
+    .btns-container {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .btns-container .btn {
+        margin-bottom: 0.8em;
+    }
 }

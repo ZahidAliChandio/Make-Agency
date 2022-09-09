@@ -1,137 +1,100 @@
-#transition-section-container {
+
+#section-wrapper {
     position: relative;
     overflow-x: hidden;
-    /* max-width: 1280px; */
     width: 100%;
     top: -4.375rem;
     z-index: 500;
 }
 
-#transition-section-inner-container {
-    position: relative;
-}
-.column-3 {
-    display: block;
-    margin-left: 0.25%;
-    float: left;
-    width: calc(33.333% - 3.333px);
-}
 .box {
     position: relative;
     display: block;
+    float: left;
+    clear: right;
     margin-bottom: 5px;
+    margin-left: 0.25%;
     cursor: pointer;
     overflow: hidden;
+    min-width: 258px;
+    width: calc(33.333% - 3.333px);
     height: 400px;
+    padding-top: 0;
 }
+
 .bg-container {
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-bottom: -1px;
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
     opacity: 1 !important;
 }
 
-.l-transtional-img-box {
+.img-box {
     overflow: hidden;
 }
-.box .button{
-    padding: 0.5rem 2.2rem;
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    background: transparent;
-    position: relative;
-    font-family: "Avenir-Book";
-    cursor: pointer;
-    font-size: 1rem;
-    fill: none;
-    stroke: #fff;
-    stroke-width: 3;
-    stroke-dasharray: 422, 0;
-    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-    border: 0.125em solid #fff;
-    margin: 3em 0;
-}
-.overlaper .overlaper-content {
+
+.overlayer {
     display: flex;
     flex-direction: column;
-    padding: 0 6em 0 0;
-    width: inherit;
-    word-wrap: break-word;
-}
-
-.overlaper {
+    flex-wrap: wrap;
+    gap: 2em;
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 100%;
     transform: scale(1.06);
     opacity: 0;
-    padding: 2em 0 0 4em;
-    width: 400px;
-    height: 400px;
+    padding: 2em 4em 0 4em;
+    width: 100%;
+    height: 100%;
     transition: all 0.2s ease-in;
-    /* background-color: #2B2B2B; */
+    background-color: rgb(0, 0, 0, 0.7);
     z-index: 100;
 }
 
-.l-transtional-img-box:hover .changeBg {
+.img-box:hover .changeBg {
     opacity: 1;
 }
 
-.l-transtional-img-box:hover .overlaper {
+.img-box:hover .overlayer {
     opacity: 1;
     transform: scale(1);
 }
 
-.overlaper .heading {
+.overlayer .heading {
     color: #fff;
     font-size: 2rem;
     font-family: 'Joyride STD';
+    margin: 0;
 }
 
-.overlaper p {
-    margin-top: 1.3em;
+.overlayer p {
     font-size: 1.4rem;
     color: #fff;
     line-height: 2.1rem;
     font-family: 'Avenir-Book';
 }
-.overlayer-btn-container {
-    margin-top: 3em;
-    width: -moz-fit-content;
-    width: fit-content;
-}
-.l-transtional-txt-box {
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 2.5rem 3.75rem;
+    padding: 2.5em 3.75em;
     background-color: #2B2B2B;
     text-align: left;
-    width: 400px;
-    height: 330px;
     border: 1px solid black;
     font-family: 'Avenir-Book';
 }
 
-.l-transtional-txt-box p {
-    margin-top: 1.3em;
+.content-box p {
     font-size: 1.9rem;
     color: #fff;
     line-height: 2.1rem;
 }
 
-.overlayer-btn-container {
-    margin-top: 3em;
-    width: -moz-fit-content;
-    width: fit-content;
-}
-
 .transitional-btn {
+    font-family: "Avenir-Book";
     padding: 0.4em 1.9em;
     position: relative;
     display: inline-block;
@@ -142,52 +105,21 @@
     font-weight: 200;
     transition: all 0.1s;
 }
-
-/* .transitional-btn::after {
-    content : "";
-    display: inline;
+.breaking-div{
     position: absolute;
-    left    : 0;
-    bottom  : 0;
-    height  : 1px;
-    width   : 50%;  
-    border-bottom:1px solid magenta;
-} */
-/* .transitional-btn:hover {
-    animation: borderAnim 0.7s 1 ease-in forwards;
-}
-@keyframes borderAnim {
-    0%{
-        border: none;
-        border-bottom: 0.09em solid #fff; ;
-    }
-    25%{
-        border-left: 0.09em solid #fff; ;
-    }
-    50%{
-        border-top: 0.09em solid #fff; ;
-    }
-    75%{
-        border-right: 0.09em solid #fff; ;
-    }
-    100%{
-        border: 0.09em solid #fff; ;
-    }    
-} */
-#transition-section-container::after {
-    /* content: "";
-    display: block;
-    position: absolute;
-    height: 9.375rem;
-    width: 9999px;
-    left: 0;
-    bottom: 0; */
-    /* margin-bottom: -4.375rem; */
-}
-/* .breaking-div{
+    bottom: 0;
     vertical-align: bottom;
     width: 100%;
     background: #f4f4f4;
     height: 9.375rem;
-    border: 2px solid blue;
-} */
+}
+@media only screen and (max-width:900px) {
+    .box {
+        width: 49.5%;
+    }
+}
+@media only screen and (max-width:650px) {
+    .box {
+        width: 100%;
+    }
+}

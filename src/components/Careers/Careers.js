@@ -1,6 +1,6 @@
 import React from 'react'
 import './Careers.css'
-import ArrowedImage from '../ArrowedImage'
+import ArrowedImage from '../General/ArrowedImage'
 import CareerImage from '../../images/careers-bg-image.jpg'
 import Environment from './Environment'
 export default function Careers() {

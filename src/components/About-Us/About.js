@@ -1,10 +1,10 @@
 import React from 'react'
 import './About.css'
-import ArrowedImage from '../ArrowedImage'
+import ArrowedImage from '../General/ArrowedImage'
 import ContactHomgBg from '../../images/about-bg-image.jpg'
 import List from './List'
 import Team from './Team'
-import ProjectHire from '../ProjectHire'
+import ProjectHire from '../General/ProjectHire'
 import Articles from '../LandingSection/Articles'
 import Reviews from '../LandingSection/Reviews'
 

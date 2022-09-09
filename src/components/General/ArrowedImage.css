@@ -1,28 +1,29 @@
 #arrowed-image-container {
     position: relative;
-    margin-top: 60px;
-    /* width: 100%; */
+    height: 100%;
+    /* margin-top: 60px; */
     overflow: hidden;
 }
-
-.arrowed-bg-image {
-    background-repeat: no-repeat;
-}
-
 .hero {
-    background-size: cover;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     transition: top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     margin-bottom: -1px;
-    background-position: top right;
+    /* background-position: top right; */
+    /* background-position:right; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
     z-index: 0;
 }
 
 .black-overlay {
-    background-image: url('../images/introduction-overlay-black.png');
+    background-image: url('../../images/introduction-overlay-black.png');
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    height: inherit;
 }
 
 .overlay {
@@ -34,7 +35,9 @@
     height: 100%;
     z-index: -5;
 }
-
+.black-overlayer{
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
+    }
 .arrowed-text-container {
     position: relative;
     z-index: 200;
@@ -77,13 +80,23 @@
     font-family: 'Avenir-Book';
     line-height: 1.3;
 }
-
+#arrowed-image-container .btn{
+    font-size: 1rem !important;
+    border: 1px solid white;
+    color: white;
+    border-radius: 0 !important;
+    font-family: 'Avenir-Book';
+    font-weight: lighter;
+}
 @media screen and (min-width: 1000px) {
     .hero {
-        background-size: contain;
+        background-size: cover;
     }
     .overlay{
         display: block;
+    }
+    .black-overlayer{
+    box-shadow: none;
     }
 }
 
