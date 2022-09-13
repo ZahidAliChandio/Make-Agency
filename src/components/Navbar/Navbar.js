@@ -3,10 +3,7 @@ import './Navbar.css'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
-export default function Navbar(props) {
-  // const [checkbox,setCheckox]=useState(false);
-  // const [toggleNavbar, setToggleNavbar] = useState(
-  // );
+export default function Navbar() {
   const [navChecked, setNavChecked] = useState(false);
   const toggleNavCheck = () => {
     setNavChecked(prev => !prev)
@@ -23,9 +20,6 @@ export default function Navbar(props) {
     <nav id="nav-container" className='bg-black padding-x-half'>
       <a id="logo" href="/" ><i> MAKE</i></a>
       <div className="wrapper nav-wrapper">
-        {/* <div className="toggle-btn" style={{flexGrow:'1'}}> */}
-        {/* <input type="checkbox" name="toggleNavbar" id="navbar-checkbox" /> */}
-        {/* </div> */}
         <div id="navbar" className="full-bleed" style={{ display: !navChecked ? 'flex' : 'none' }}>
           {/* <div id="navbar" className="full-bleed" style={{visibility:!checked?'visible':'hidden'}}> */}
           <li className="item" id="item1"><Link className="nav-item nav-item-color" to="/about">About Us</Link></li>

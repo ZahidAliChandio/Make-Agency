@@ -168,7 +168,7 @@
 .hidden{
   visibility: hidden;
 }
-@media(max-width:1000px) {
+@media only screen and (max-width:1000px) {
   .nav-wrapper{
     position: absolute;
     top: 3.9rem;

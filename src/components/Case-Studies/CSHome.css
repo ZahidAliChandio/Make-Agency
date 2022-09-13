@@ -1,7 +1,9 @@
 #case-studies-home{
     position: relative;
+    /* border: 2px solid red; */
     color: white;
-    margin-bottom: -2.8em;
+    /* width: 100%;
+    overflow: hidden; */
 }
 .hover-b-border{
     cursor: pointer;
@@ -11,21 +13,34 @@
     border-bottom: 2px solid white;
 }
 .drop-down-container{
-    position: absolute;
-    bottom: 5rem;
-    left: 4rem;
     display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 12%;
+    left: 5rem;
     /* font-family: 'Joyride STD'; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: center;
     gap: 2em;
     z-index: 300;
 }
-.drop-down-container select{
-    height: 2rem;
+#case-studies-home .case-study-selector{
+    font-size: 1.1rem;
+    line-height: 3rem;
     font-weight: bold;
+    background-color: transparent;    
     /* font-family: 'Joyride STD'; */
-    background-color: rgb(17, 15, 15);
-    color: white;
+    font-family: 'Avenir-Book';
+    color: rgb(244, 244, 244);
     border: none;
     outline: none;
+}
+@media only screen and (min-width: 1002px) {
+    #case-studies-home .hero{
+        background-position:bottom right;
+        background-size: 50%;
+    }
+    #case-studies-home .inner-hero h1,h2{
+        font-size: 3.2rem;
+    }
 }

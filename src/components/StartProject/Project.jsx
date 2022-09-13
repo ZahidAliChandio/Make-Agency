@@ -2,49 +2,38 @@ import React from 'react'
 import './Project.css'
 import ArrowedImage from '../General/ArrowedImage'
 import ProjectBg from '../../images/case-studies-arrow-bg.jpg'
-import Website from '../../images/project-website.svg'
-import Social from '../../images/project-social.svg'
-import ContentCreation from '../../images/project-content-creation.svg'
-import Search from '../../images/project-search.svg'
+import { ReactComponent as Website } from '../../images/project-website.svg'
+import { ReactComponent as Social } from '../../images/project-social.svg'
+import { ReactComponent as ContentCreation } from '../../images/project-content-creation.svg'
+import { ReactComponent as Search } from '../../images/project-search.svg'
 import { useState } from 'react'
 
 export default function Project() {
-  const [images, setImages] = useState({
-    imagesObj: [{
+  const [images, setImages] = useState([
+    {
       photo: Website,
-      text: "Websites"
+      text: "Websites",
+      active: false
     },
     {
       photo: Social,
-      text: "Social Media"
+      text: "Social Media",
+      active: false
     },
     {
       photo: ContentCreation,
-      text: "Content Creation"
+      text: "Content Creation",
+      active: false
     },
     {
       photo: Search,
-      text: "Search (PPC/SEO)"
-    }]
-  });
-  const [activated, setActivated] = useState([]);
+      text: "Search (PPC/SEO)",
+      active: false
+    }]);
   const toggleActive = (index) => {
-    let activatedImages = [...activated]
-    if (!activated.includes(images.imagesObj[index])) {
-      activatedImages.push(images.imagesObj[index], index);
-    }
-    else {
-      activatedImages.splice(index, 1);
-    }
-    setActivated(prev => prev = activatedImages);
-  }
-  const changeImageStyle = (index) => {
-    if (activated.includes(images.imagesObj[index])) {
-      return 'active';
-    }
-    else {
-      return "inactive";
-    }
+    let newImages = [...images];
+    newImages[index].active = !(newImages[index].active);
+    setImages(newImages);
   }
   return (
     <div id='project-container'>
@@ -55,15 +44,13 @@ export default function Project() {
         <span className="p-heading w-heading">Get started in 30 seconds!</span>
         <span className='p-sub-heading'>What can we help you with?*</span>
         <ul id='project-item-container'>
-          {images.imagesObj.map((element, index) => {
-            return <div key={index} className={changeImageStyle(index)} onClick={() => { toggleActive(index) }}>
-              {/* <input type="checkbox" name={`form-check-box ${index}`} id="form-check-box" />
-              <label htmlFor={`form-check-box ${index}`}> */}
-              <li className='list-item'><div className={'form-image-container'}>
-                <img src={element.photo} alt="" className={'form-image'} /></div>
-                <span className='list-item-title'>{element.text}</span></li>
-              {/* </label> */}
-            </div>
+          {images.map((element, index) => {
+            return <li key={index} className='list-item' onClick={() => toggleActive(index)}>
+              <div className={'form-image-container'} style={{border:element.active?"2px solid #F77265":"2px solid #817d8b"}}>
+                <element.photo fill={element.active ? "#F77265" : "#817d8b"} />
+              </div>
+              <span className='list-item-title' style={{color:element.active?'#F77265':'#817d8b'}}>{element.text}</span>
+            </li>
           })}
         </ul>
         <form action='/' className="p-form">
@@ -78,7 +65,7 @@ export default function Project() {
           <div className="field-container">
             <span>Budget* <span className='small-font'>Essentially digital projects vary massively in their complexity - Your budget will help us decide on the right solution for your project.</span>
             </span>
-            <select name="select-budget" id="budget-selector">
+            <select name="select-budget" id="budget-selector" className='project-selector'>
               <option value="choose">Choose One Option</option>
               <option value="euro">£6,500 - £10,000</option>
               <option value="euro">£11,000 - £25,000</option>
@@ -93,7 +80,7 @@ export default function Project() {
           </div>
           <div className="field-container">
             <span>How many employees work for your business?*</span>
-            <select name="selcect-number" id="number-selector">
+            <select name="selcect-number" id="number-selector" className='project-selector'>
               <option value="select-number">Choose one option</option>
               <option value="select-number">1-9</option>
               <option value="select-number">10-49</option>

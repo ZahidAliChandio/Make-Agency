@@ -17,13 +17,14 @@ function App() {
   return (
     <Router>
       <div className="outer-container">
-        {/* <Navbar /> */}
+        <Navbar />
         <section className='landing-container'>
           <Routes>
             <Route path="/" element={<LandingSection />} />
           </Routes>
           <Routes>
             <Route path="/start-project" element={<Project/>} />
+            {/* <Route path="/start-project" element={<CaseStudies />} /> */}
           </Routes>
           <Routes>
             <Route path="/about" element={<About/>} />
@@ -34,6 +35,7 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/case-studies" element={<CaseStudies />} />
+          {/* <Route path="/case-studies" element={<Project/>} /> */}
         </Routes>
         <Routes>
           <Route path="/careers" element={<Careers/>} />
