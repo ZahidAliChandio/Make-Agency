@@ -3,6 +3,7 @@ import './Navbar.css'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import { useEffect } from 'react';
 export default function Navbar() {
   const [navChecked, setNavChecked] = useState(false);
   const toggleNavCheck = () => {
@@ -10,12 +11,27 @@ export default function Navbar() {
   }
   const [dropDown, setDropDown] = useState('hidden');
   const toggleDropDown = () => {
-    if(dropDown==='hidden'){
+    if (dropDown === 'hidden') {
       setDropDown('visible');
-    }else{
+    } else {
       setDropDown('hidden');
     }
   }
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.screen.width >= 1002) {
+        setNavChecked(false);
+      }
+      if (window.screen.width === 1001) {
+        setNavChecked(true);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  });
+
   return (
     <nav id="nav-container" className='bg-black padding-x-half'>
       <a id="logo" href="/" ><i> MAKE</i></a>
