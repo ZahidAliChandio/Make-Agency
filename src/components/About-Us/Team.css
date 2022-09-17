@@ -2,27 +2,32 @@
     position: relative;
     background-color: rgb(30, 29, 29);
     color: white;
+    width: 100%;
+    overflow-x: hidden;
 }
 .team-members{
     display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-flow: row;
     column-gap: 0.5em;
-    grid-row-gap: 0.4em;
-    padding: 1em 5em 2em 5em;
+    row-gap: 0.4em;
+    padding: 4% 4% 2% 4%;
     margin-top: 4em;
     margin-bottom: 2em;
+    width: 100%;
 }
 .team-members .t-img-container{
     position: relative;
-    width: 290px;
-    height: 300px;
+    width: 22vw;
+    height: -moz-fit-content;
+    height: fit-content;
     overflow: hidden;
 }
 .t-img-container img{
-    object-fit: fill;
+    object-fit: contain;
     object-position: center;
-    width:290px;
-    height: 300px;
+    width:inherit;
+    height: inherit;
     transition: all 0.4s ease-in;
 }
 .yellow-border{
@@ -79,4 +84,28 @@
 #team-media img{
     width: 337px;
     height: 300px;
+}
+@media only screen and (max-width:900px){
+    .team-members{
+        grid-template-columns: auto auto auto;
+    }
+    .team-members .t-img-container{
+        width: 30vw;
+    }
+}
+@media only screen and (max-width:600px){
+    .team-members{
+        grid-template-columns: auto auto;
+    }
+    .team-members .t-img-container{
+        width: 45vw;
+    }
+}
+@media only screen and (max-width:400px){
+    .team-members{
+        grid-template-columns: auto;
+    }
+    .team-members .t-img-container{
+        width: 100%;
+    }
 }

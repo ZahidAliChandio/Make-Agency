@@ -10,7 +10,19 @@ a{
 html,
 body {
   font: inherit;
-  height: 100vh;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  z-index: 5500;
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: auto;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 .padding-x {
   padding-left: 3.75rem;
