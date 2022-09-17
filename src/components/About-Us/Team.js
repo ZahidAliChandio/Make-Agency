@@ -18,14 +18,14 @@ import VideoState from '../../images/video-state.svg'
 
 import './Team.css'
 export default function Team() {
-    const teamVideo=useRef();
-    const videoBtn=useRef();
-    const videoThumbnail=useRef();
-    const playTeamVideo=()=>{
-        videoBtn.current.style.display='none';
-        videoThumbnail.current.style.zIndex='-5';
+    const teamVideo = useRef();
+    const videoBtn = useRef();
+    const videoThumbnail = useRef();
+    const playTeamVideo = () => {
+        videoBtn.current.style.display = 'none';
+        videoThumbnail.current.style.zIndex = '-5';
         teamVideo.current.play();
-        teamVideo.current.style.zIndex='100';
+        teamVideo.current.style.zIndex = '100';
     }
     return (
         <div id='team-container'>
@@ -33,47 +33,47 @@ export default function Team() {
                 Meet the team
             </h3>
             <div className="team-members">
-                <a href="/"><div className="t-img-container">
+                <a href="/" className="t-img-container">
                     <img src={TeamMember1} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember2} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember3} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember4} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember5} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember6} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember7} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
-                <a href=""><div className="t-img-container">
+                </a>
+                <a href="" className="t-img-container">
                     <img src={TeamMember8} alt="Team Member" />
                     <div className="yellow-border"></div>
-                </div></a>
+                </a>
             </div>
             <div id="team-video-container">
                 <video loop preload="auto" muted playsInline ref={teamVideo}>
                     <source src={TeamVideo} type='video/mp4' alt='Team video' />
                 </video>
                 <div id="team-video-thumbnail">
-                    <img src={TeamVideoThumbnail} alt="Team video Thumbnail" ref={videoThumbnail}/>
+                    <img src={TeamVideoThumbnail} alt="Team video Thumbnail" ref={videoThumbnail} />
                 </div>
-                <button className='change-video-state' onClick={playTeamVideo}  ref={videoBtn}>
+                <button className='change-video-state' onClick={playTeamVideo} ref={videoBtn}>
                     <img src={VideoState} alt="Play/Pause" />
                 </button>
             </div>

@@ -1,52 +1,80 @@
-.list-section{
-    position: relative;
+.list-section {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    padding: 8em 6em;
+    position: relative;
+    padding: 9% 4%;
     width: 100%;
     overflow: hidden;
-    gap: 2rem;
     background-color: #2B2B2B;
     color: white;
 }
-.list-left{
+
+.list-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
-    padding: 0.5em 1em 5em 2em;
-}
-.list-left .left-item{
-    display: flex;
-    flex-direction: column;
-    line-height: 0.5rem;
+    padding: 1% 1% 6% 3%;
     gap: 3.2rem;
 }
-.l-yellow-text{
+
+.list-left .left-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.l-yellow-text {
     font-size: 1.3rem;
     font-family: "Avenir Book";
 }
-.l-number-heading{
+
+.l-number-heading {
     font-size: 6.5rem;
     font-family: "WesFy Black";
     font-weight: 1000;
 }
+
 .list-right {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    width: 50%;
     padding: 0 1em 0 1em;
 }
-.list-right .title,.a-heading{
+
+.list-right .title,
+.a-heading {
     font-size: 2rem;
     font-family: 'Joyride STD';
 }
-.list-right .subtitle{
+
+.list-right .subtitle {
     font-size: 1.5rem;
     font-family: 'Avenir-Book';
 }
-.l-right-para{
+
+.l-right-para {
     line-height: 1.6em;
     font-family: 'Avenir-Book';
+}
+
+@media only screen and (min-width:1024px) {
+    .list-section {
+        padding: 9% 7%;
+    }
+}
+
+@media only screen and (min-width:950px) {
+    .list-section {
+        flex-direction: row;
+    }
+
+    .list-left {
+        gap: 2rem;
+        width: 50%;
+    }
+
+    .list-right {
+        width: 50%;
+    }
 }
