@@ -1,0 +1,15 @@
+#about-section{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#about-section .arrow-image-container{
+    height: 550px;
+}
+@media only screen and (min-width: 1002px) {
+    #about-section .hero{
+        background-position:bottom right;
+        background-size: 50% 90%;        
+    }
+}
