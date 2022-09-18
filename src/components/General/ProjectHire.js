@@ -4,8 +4,7 @@ import './ProjectHire.css'
 export default function ProjectHire() {
     return (
         <div id='project-hire-container'>
-            <div className="ph-bg-image">
-                <img src={BgImage} alt="Laughing Developer" />
+            <div className="ph-bg-image" style={{ backgroundImage: `url(${BgImage})` }}>
             </div>
             <div className="ph-text-content">
                 <div className="ph-left inner-text-container">
