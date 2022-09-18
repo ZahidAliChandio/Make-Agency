@@ -58,7 +58,7 @@
 }
 
 .inner-hero {
-    padding: 6.25rem 0 2.5rem;
+    padding: 5rem 0 2.5rem;
 }
 
 .inner-hero p {
@@ -79,7 +79,7 @@
 }
 
 .subtitle {
-    font-size: 1.5625rem;
+    font-size: 1.3rem;
     font-family: 'Avenir-Book';
     line-height: 1.3;
 }
@@ -93,12 +93,6 @@
     font-weight: lighter;
 }
 
-@media only screen and (min-width: 1270px) {
-    .inner-hero {
-        position: absolute;
-        margin: 0 auto;
-    }
-}
 @media only screen and (min-width: 1002px) {
     .hero {
         background-size: cover;
@@ -111,32 +105,39 @@
     .black-overlayer {
         box-shadow: none;
     }
+
     .inner-hero {
         padding: 4.375rem 0 2.5rem;
-        max-width: 65%;
+        max-width: 60%;
     }
 
     .inner-hero h1,
     h2 {
-        font-size: 2.2rem
+        font-size: 2.5rem
     }
-}
-@media only screen and (min-width: 79.375rem) {
-    .inner-hero {
-        top: 52%;
-        left: 0;
-        transform: translateY(-50%);
-        padding: 0;
+
+    .inner-hero .subtitle {
+        font-size: 1.52rem;
     }
 }
 
-@media only screen and (max-width: 79.375rem) {
+@media only screen and (min-width: 1270px) {
+    .inner-hero {
+        padding: 0;
+        top: 52%;
+        left: 0;
+        transform: translateY(-50%);
+        position: absolute;
+        margin: 1.2em auto;
+    }
+
     body:not(.home) .hero .wrapper {
         min-height: 15.625rem;
     }
 }
+
 @media only screen and (max-width: 650px) {
-    #arrowed-image-container{
+    #arrowed-image-container {
         text-align: center;
     }
 }

@@ -8,27 +8,25 @@ import IBMThumbnail from '../../images/ibm-thumbnail.png'
 import ClearpayThumbnail from '../../images/clearpay-thumbnail.png'
 export default function CSBoxes() {
     return (
-        <div className="s-boxes-container">
-            <div className="s-box">
-                <div className="img-container">
-                    <a href="/"><img src={KlerityThumbnail} alt="Klerity" /></a>
-                </div>
-                <div className="img-container">
-                    <a href="/"><img src={XapoThumbnail} alt="Xapo" /></a>
-                </div>
-                <div className="img-container">
-                    <a href="/"><img src={NeatThumbnail} alt="Neat" /></a>
-                </div>
-                <div className="img-container">
-                    <a href="/"><img src={SingleTrackThumbnail} alt="Neat" /></a>
-                </div>
-                <div className="img-container">
-                    <a href="/"><img src={IBMThumbnail} alt="IBM" /></a>
-                </div>
-                <div className="img-container">
-                    <a href="/"><img src={ClearpayThumbnail} alt="Clearpay" /></a>
-                </div>
-            </div>
+        <div className="boxes-container">
+            <a href="/" className="img-container" >
+                <img src={KlerityThumbnail} alt="Klerity" />
+            </a >
+            <a href="/" className="img-container">
+                <img src={XapoThumbnail} alt="Xapo" />
+            </a>
+            <a href="/" className="img-container">
+                <img src={NeatThumbnail} alt="Neat" />
+            </a>
+            <a href="/" className="img-container">
+                <img src={SingleTrackThumbnail} alt="Neat" />
+            </a>
+            <a href="/" className="img-container">
+                <img src={IBMThumbnail} alt="IBM" />
+            </a>
+            <a href="/" className="img-container">
+                <img src={ClearpayThumbnail} alt="Clearpay" />
+            </a>
         </div>
     )
 }
