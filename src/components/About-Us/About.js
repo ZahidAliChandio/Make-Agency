@@ -5,7 +5,7 @@ import List from './List'
 import Team from './Team'
 import ProjectHire from '../General/ProjectHire'
 import Articles from '../LandingSection/Articles'
-import Reviews from '../LandingSection/Reviews'
+import Reviews from '../General/Reviews'
 import './About.css'
 
 export default function About() {

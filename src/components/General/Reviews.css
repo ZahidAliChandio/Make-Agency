@@ -7,24 +7,25 @@
     background-color: #1a1a1a;
     color: white;
     font-family: 'Avenir-Book';
-    font-size: 1.5rem;
     font-weight: lighter;
 }
-.review-stars{
+
+.review-stars {
     justify-content: center;
     vertical-align: top;
     height: 4rem;
 }
+
 .review-content {
     position: relative;
     display: flex;
-    text-align: center;
     flex-direction: column;
     margin-top: 1em;
-    width: 45%;
+    font-size: 1.3rem;
+    width: 90%;
+    min-height: 350px;
     text-align: center;
     overflow-x: hidden;
-    min-height:350px;
 }
 
 .review-container {
@@ -37,15 +38,17 @@
     content: '';
     position: relative;
     display: block;
+    font-size: 1rem;
     animation: fadeInOutAnimation 9s linear infinite;
     transition: all 2s ease-in;
 }
+
 .review-author::after {
     content: '';
     position: relative;
     display: block;
-    font-size: 1rem;
-    left: 50%; 
+    font-size: 0.7rem;
+    left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 20%;
     width: 9rem;
@@ -86,5 +89,37 @@
 
     100% {
         content: 'Lily Murphy | Bonnier Publishing';
+    }
+}
+
+@media only screen and (min-width:500px) {
+    .review-content {
+        width: 80%;
+    }
+    .review-container::after {
+        font-size: 1.2rem;
+    }
+    .review-author::after {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width:767px) {
+    .review-content {
+        width: 70%;
+    }
+    .review-container::after {
+        font-size: 1.5rem;
+    }
+    .review-author::after {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (min-width:1002px) {
+    .review-content {
+        width: 45%;
+    }
+    .review-container::after {
+        font-size: 1.5rem;
     }
 }
