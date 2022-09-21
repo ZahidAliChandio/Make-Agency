@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Navbar.css'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 export default function Navbar() {
+  // const navCheck=useRef();
   const [navChecked, setNavChecked] = useState(false);
   const toggleNavCheck = () => {
-    setNavChecked(prev => !prev)
+    setNavChecked(prev => !prev);
   }
   const [dropDown, setDropDown] = useState('hidden');
+
   const toggleDropDown = () => {
     if (dropDown === 'hidden') {
       setDropDown('visible');
@@ -21,21 +24,21 @@ export default function Navbar() {
   useEffect(() => {
     function handleResize() {
       if (window.screen.width >= 1002) {
-        setNavChecked(false);
+        setNavChecked(true);
       }
       if (window.screen.width <= 1001) {
-        setNavChecked(true);
+        setNavChecked(false);
       }
     }
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [navChecked]);
+  });
 
   return (
     <nav id="nav-container" className='bg-black padding-x-half'>
       <a id="logo" href="/" ><i> MAKE</i></a>
-      <div className="wrapper nav-wrapper" style={{ display: !navChecked ? 'flex' : 'none' }}>
+      <div className="wrapper nav-wrapper" style={{ display: navChecked ? 'flex' : 'none' }}>
         <div id="navbar" className="full-bleed">
           {/* <div id="navbar" className="full-bleed" style={{visibility:!checked?'visible':'hidden'}}> */}
           <li className="item" id="item1"><Link className="nav-item nav-item-color" to="/about">About Us</Link></li>
@@ -54,14 +57,16 @@ export default function Navbar() {
           <li className="item" id="item4"><Link className="nav-item nav-item-color" to="/careers">Careers</Link></li>
           <li className="item" id="item4"><a className="nav-item nav-item-color" href="/">Contact Us</a></li>
         </div>
-        <Link className='btn yellow-button' id='nav-yellow-btn' to="/start-project" style={{ display: !navChecked ? 'flex' : 'none' }}>Start Your Project</Link>
+        <Link className='btn yellow-button' id='nav-yellow-btn' to="/start-project" style={{ display: navChecked ? 'flex' : 'none' }}>Start Your Project</Link>
       </div>
-      <label htmlFor="menu-check-box" id='nav-check'>
-        <input type="checkbox" name="menu-check" id="menu-check-box" onClick={toggleNavCheck} style={{ display: 'none' }} />
+      <CircularProgressbar />
+      <label htmlFor="menu-check-box" id='nav-check' >
+        <input type="checkbox" name="menu-check" id="menu-check-box" style={{ display: 'none' }} onClick={() => toggleNavCheck()} />
         <span className='check'></span>
         <span className='check'></span>
         <span className='check'></span>
       </label>
+      {/* </CircularProgressbar> */}
     </nav>
   )
 }

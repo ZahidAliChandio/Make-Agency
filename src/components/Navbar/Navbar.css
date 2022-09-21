@@ -156,16 +156,12 @@
   transform: rotate(-45deg);
 }
 #nav-check input:checked~:nth-child(3)::before {
-  display: none;
+  display:none;
 }
 #nav-check input:checked~:nth-child(4)::before {
   bottom: 0.6em;
   transform: rotate(45deg);
 }
-/* #nav-check input:checked~span.check::before {
-  background-color: green !important;
-} */
-
 
 .btn {
   display: inline-block;
@@ -238,6 +234,7 @@
   #navbar li {
     width: 100%;
     padding-right: 1em;
+    margin-left: 0.7em;
   }
 
   #navbar li .nav-item {
