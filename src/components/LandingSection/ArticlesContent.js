@@ -10,7 +10,7 @@ export default function ArticlesContent(props) {
             <a href="/" className='title'><h3>{props.title}</h3></a>
             <div>
                 <p className='articles-para'>{props.para}</p>
-                <a href="/" className='a-read-more'><span>Read More </span><i class="fas fa-chevron-right"></i></a>
+                <a href="/" className='a-read-more'><span>Read More </span><i className="fas fa-chevron-right"></i></a>
             </div>
         </div>
     )
