@@ -1,18 +1,61 @@
-.career-agenda{
+#careers-container .arrow-image-container {
+    width: 100%;
+    height: 400px;
+}
+#careers-container .inner-hero {
+    padding: 6.25rem 0 2.5rem !important;
+}
+
+#careers-container .inner-hero p {
+    margin: 0;
+}
+
+.career-agenda {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 10em;
-    width: 100%;
-    height: 100vh;
+    padding: 10% 5%;
     background-color: black;
     color: white;
 }
-.career-agenda .heading{
+
+.career-agenda .heading {
     line-height: 1.06;
-    font-size: 2.125rem;
+    font-size: 1.25rem;
     text-align: center;
     font-family: 'Joyride STD' !important
+}
+
+@media only screen and (min-width: 1270px) {
+    #careers-container .arrow-image-container {
+        height: 545px;
+    }
+}
+
+@media only screen and (min-width: 1002px) {
+    #careers-container .hero {
+        background-size: 55%;
+        background-position: bottom right;
+    }
+
+    #careers-container .inner-hero {
+        top: 60%;
+        max-width: 62%;
+    }
+
+    #careers-container .inner-hero h1,
+    h2 {
+        font-size: 3.3rem;
+    }
+    .career-agenda {
+        padding: 15% 12%;
+    }
+}
+
+@media only screen and (min-width:800px) {
+    .career-agenda .heading {
+        font-size: 2.125rem;
+    }
 }
