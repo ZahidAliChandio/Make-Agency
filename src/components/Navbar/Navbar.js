@@ -23,20 +23,20 @@ export default function Navbar() {
       if (window.screen.width >= 1002) {
         setNavChecked(false);
       }
-      if (window.screen.width === 1001) {
+      if (window.screen.width <= 1001) {
         setNavChecked(true);
       }
     }
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  });
+  }, [navChecked]);
 
   return (
     <nav id="nav-container" className='bg-black padding-x-half'>
       <a id="logo" href="/" ><i> MAKE</i></a>
-      <div className="wrapper nav-wrapper">
-        <div id="navbar" className="full-bleed" style={{ display: !navChecked ? 'flex' : 'none' }}>
+      <div className="wrapper nav-wrapper" style={{ display: !navChecked ? 'flex' : 'none' }}>
+        <div id="navbar" className="full-bleed">
           {/* <div id="navbar" className="full-bleed" style={{visibility:!checked?'visible':'hidden'}}> */}
           <li className="item" id="item1"><Link className="nav-item nav-item-color" to="/about">About Us</Link></li>
           <li className="item dropbtn dropdown" id="item2"><a className="nav-item active" href="/"><span className='flex-1'>Our Services</span></a>
@@ -56,10 +56,12 @@ export default function Navbar() {
         </div>
         <Link className='btn yellow-button' id='nav-yellow-btn' to="/start-project" style={{ display: !navChecked ? 'flex' : 'none' }}>Start Your Project</Link>
       </div>
-      <div id="nav-toggle-container">
-        <label htmlFor="menu-check-box" style={{ color: "white" }}>Click</label>
+      <label htmlFor="menu-check-box" id='nav-check'>
         <input type="checkbox" name="menu-check" id="menu-check-box" onClick={toggleNavCheck} style={{ display: 'none' }} />
-      </div>
+        <span className='check'></span>
+        <span className='check'></span>
+        <span className='check'></span>
+      </label>
     </nav>
   )
 }
